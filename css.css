@@ -1,0 +1,111 @@
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: hsl(204, 43%, 93%);
+}
+
+.container {
+    display: grid;
+    grid-template: 45% 1fr / 1fr 1fr;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 75vh;
+    width: 700px;
+    margin: 10vh auto 10vh;
+}
+
+h1 {
+    color: hsl(179, 62%, 43%);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: hsl(71, 73%, 54%);
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+h3, p {
+    color: hsl(204, 43%, 93%);
+    margin-top: 0;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.top-box p{
+    color: hsl(218, 22%, 67%);
+}
+
+.top-box {
+    grid-column: 1/-1;
+    background: white;
+    padding: 15px 40px;
+    line-height: 1.5;
+}
+
+.left-box {
+    background: hsl(179, 62%, 43%);
+    grid-column: 1/2;
+    padding: 25px;
+    padding: 35px 20px 25px 40px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.price span {
+    margin-right: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+button {
+    color: white;
+    background: hsl(71, 73%, 54%);
+    width: 95%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 1em;
+    transition: background .5s;
+}
+
+button:hover {
+    background: hsl(71, 82%, 64%);
+}
+
+
+
+.right-box {
+    background: hsl(179, 60%, 53%) ;
+    grid-column: 2/3;
+    padding: 35px 100px 25px 40px;
+}
+
+.right-box p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 375px) {
+        .container {
+            grid-template: repeat(3, auto) / 1fr;
+            width: 85vw;
+            height: auto;
+        }
+
+        .top-box, .left-box, .right-box {
+            grid-column: 1 / 2;
+            padding: 20px;
+        }
+}
